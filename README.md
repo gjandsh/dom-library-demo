@@ -1,5 +1,7 @@
 # dom-library-demo
-#需求
+##需求
+
+```
 let items = $('li')
 
 items.on('click', function(){
@@ -16,3 +18,4 @@ items.get(0)
 $item.siblings().addClass('active')
 
 $item.siblings().removeClass('active').end().addClass('active')
+```
