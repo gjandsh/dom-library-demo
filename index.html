@@ -8,10 +8,10 @@
 </head>
 <body>
     <ul>
-        <li class="error active">1</li>
-        <li class="error active">2</li>
-        <li class="error active">3</li>
-        <li class="error active">4</li>
+        <li class="error">1</li>
+        <li class="error">2</li>
+        <li class="error">3</li>
+        <li class="error">4</li>
     </ul>
     <script src='dom.js'></script>
     <script>
@@ -35,7 +35,7 @@
         console.assert($item.siblings !== undefined)
         console.assert($item[0] === item)
         let $li = $('li:nth-child(2)')
-        $li.siblings().addClass('error')
+        $li.siblings().addClass('active')
         console.assert($li.siblings().previousSelection === $li)
         console.assert($li.siblings().end() === $li.siblings().previousSelection)
         $li.siblings().removeClass('active').end().addClass('error')
