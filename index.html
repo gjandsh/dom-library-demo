@@ -8,10 +8,10 @@
 </head>
 <body>
     <ul>
-        <li class="error">1</li>
-        <li class="error">2</li>
-        <li class="error">3</li>
-        <li class="error">4</li>
+        <li class="error active">1</li>
+        <li class="error active">2</li>
+        <li class="error active">3</li>
+        <li class="error active">4</li>
     </ul>
     <script src='dom.js'></script>
     <script>
@@ -38,7 +38,7 @@
         $li.siblings().addClass('error')
         console.assert($li.siblings().previousSelection === $li)
         console.assert($li.siblings().end() === $li.siblings().previousSelection)
-        $li.siblings().removeClass('error').end().addClass('error')
+        $li.siblings().removeClass('active').end().addClass('error')
         console.assert(typeof item.on === 'undefined')
         console.assert(typeof $item.on === 'function')
         console.log('运行完毕')
